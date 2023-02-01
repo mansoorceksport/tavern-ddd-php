@@ -1,6 +1,7 @@
 <?php
 namespace Mansoor\TavernDddPhp\Application\Service\Order;
 
+use Mansoor\TavernDddPhp\Application\Service\Cart\CartConfiguration;
 use Mansoor\TavernDddPhp\Application\Service\Cart\CartService;
 use Mansoor\TavernDddPhp\Domain\Aggregate\Customer;
 use Mansoor\TavernDddPhp\Domain\Aggregate\Product;
@@ -37,7 +38,7 @@ class OrderServiceTest extends TestCase
         }
 
         // make order
-        $cart = CartService::NewCart();
+        $cart = CartService::NewCart(CartConfiguration::WithMemoryCartRepository());
         $item1 = clone $products[0];
         $item1->setQuantity(1);
 
