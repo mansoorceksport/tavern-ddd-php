@@ -39,14 +39,11 @@ class OrderService{
      * @throws ProductNotFoundException
      * @throws CustomerNotFoundException
      */
-    public function CreateOrder(string $customerId, array $productIds): string{
-        $products = [];
+    public function CreateOrder(string $customerId, array $products): string{
         $total = 0.0;
         $customer = $this->customerRepository->getById($customerId);
-        foreach($productIds as $id){
-            $p = $this->productRepository->getById($id);
-            $products[] = $p;
-            $total += $p->getPrice();
+        foreach($products as $product){
+            $total += $product->getTotal();
         }
 
         return sprintf("customer with id: %s has ordered %d products with total %0.2f", $customer->getId(), count($products), $total);

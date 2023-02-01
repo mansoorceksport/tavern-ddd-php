@@ -1,6 +1,7 @@
 <?php
 namespace Mansoor\TavernDddPhp\Application\Service\Order;
 
+use Mansoor\TavernDddPhp\Application\Service\Cart\CartService;
 use Mansoor\TavernDddPhp\Domain\Aggregate\Customer;
 use Mansoor\TavernDddPhp\Domain\Aggregate\Product;
 use Mansoor\TavernDddPhp\Domain\Repository\Customer\Exception\CustomerAddException;
@@ -36,13 +37,18 @@ class OrderServiceTest extends TestCase
         }
 
         // make order
-        $orders = [
-            $products[0]->getId(),
-            $products[1]->getId()
-        ];
+        $cart = CartService::NewCart();
+        $item1 = clone $products[0];
+        $item1->setQuantity(1);
+
+        $item2 = clone $products[1];
+        $item2->setQuantity(1);
+
+        $cart->addProduct($item1);
+        $cart->addProduct($item2);
 
         try {
-            $result = $os->CreateOrder($customer->getId(), $orders);
+            $result = $os->CreateOrder($customer->getId(), $cart->getProducts());
             $this->assertTrue($result != "", "create order fail");
             echo $result;
         } catch (ProductNotFoundException|CustomerNotFoundException $e) {

@@ -50,4 +50,23 @@ namespace Mansoor\TavernDddPhp\Domain\Aggregate;
      public function getPrice(): float{
          return $this->price;
     }
+
+     /**
+      * @param int $q
+      * @return void
+      */
+     public function setQuantity(int $q): void{
+         $this->quantity = $q;
+    }
+
+     /**
+      * @return int
+      */
+     public function getQuantity(): int{
+         return $this->quantity;
+    }
+
+    public function getTotal(): float{
+         return $this->price*$this->quantity;
+    }
 }
