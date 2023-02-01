@@ -1,12 +1,12 @@
 <?php
 
-namespace Mansoor\TavernDddPhp\domain\repository\customer\memory;
+namespace Mansoor\TavernDddPhp\Domain\Repository\Customer\Memory;
 
-use Mansoor\TavernDddPhp\domain\aggregate\Customer;
-use Mansoor\TavernDddPhp\domain\repository\customer\exception\CustomerAddException;
-use Mansoor\TavernDddPhp\domain\repository\customer\exception\CustomerNotFoundException;
-use Mansoor\TavernDddPhp\domain\repository\customer\exception\CustomerUpdateException;
-use Mansoor\TavernDddPhp\domain\repository\customer\Repository;
+use Mansoor\TavernDddPhp\Domain\Aggregate\Customer;
+use Mansoor\TavernDddPhp\Domain\Repository\Customer\Exception\CustomerAddException;
+use Mansoor\TavernDddPhp\Domain\Repository\Customer\Exception\CustomerNotFoundException;
+use Mansoor\TavernDddPhp\Domain\Repository\Customer\Exception\CustomerUpdateException;
+use Mansoor\TavernDddPhp\Domain\Repository\Customer\Repository;
 
 class Memory implements Repository {
 

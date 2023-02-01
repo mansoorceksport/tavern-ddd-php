@@ -1,11 +1,12 @@
 <?php
-namespace Mansoor\TavernDddPhp\domain\repository\product;
+namespace Mansoor\TavernDddPhp\Domain\Repository\Product;
 
-use Mansoor\TavernDddPhp\domain\aggregate\Product;
-use Mansoor\TavernDddPhp\domain\repository\product\exception\ProductAddException;
-use Mansoor\TavernDddPhp\domain\repository\product\exception\ProductDeleteException;
-use Mansoor\TavernDddPhp\domain\repository\product\exception\ProductNotFoundException;
-use Mansoor\TavernDddPhp\domain\repository\product\exception\ProductUpdateException;
+use Mansoor\TavernDddPhp\Domain\Aggregate\Product;
+use Mansoor\TavernDddPhp\Domain\Repository\Product\Exception\ProductAddException;
+use Mansoor\TavernDddPhp\Domain\Repository\Product\Exception\ProductDeleteException;
+use Mansoor\TavernDddPhp\Domain\Repository\Product\Exception\ProductNotFoundException;
+use Mansoor\TavernDddPhp\Domain\Repository\Product\Exception\ProductUpdateException;
+
 
 interface repository{
      /**

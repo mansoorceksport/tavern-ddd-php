@@ -1,7 +1,7 @@
 <?php
-namespace Mansoor\TavernDddPhp\domain\aggregate;
+namespace Mansoor\TavernDddPhp\Domain\Aggregate;
 
- use Mansoor\TavernDddPhp\domain\entity\Item;
+ use Mansoor\TavernDddPhp\Domain\Entity\Item;
 
  class Product extends Item{
      CONST PREFIX = "product_";

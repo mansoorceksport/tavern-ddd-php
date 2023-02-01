@@ -1,11 +1,11 @@
 <?php
 namespace Mansoor\TavernDddPhp\Application\Service\Order;
 
-use Mansoor\TavernDddPhp\domain\aggregate\Customer;
-use Mansoor\TavernDddPhp\domain\aggregate\Product;
-use Mansoor\TavernDddPhp\domain\repository\customer\exception\CustomerAddException;
-use Mansoor\TavernDddPhp\domain\repository\customer\exception\CustomerNotFoundException;
-use Mansoor\TavernDddPhp\domain\repository\product\exception\ProductNotFoundException;
+use Mansoor\TavernDddPhp\Domain\Aggregate\Customer;
+use Mansoor\TavernDddPhp\Domain\Aggregate\Product;
+use Mansoor\TavernDddPhp\Domain\Repository\Customer\Exception\CustomerAddException;
+use Mansoor\TavernDddPhp\Domain\Repository\Customer\Exception\CustomerNotFoundException;
+use Mansoor\TavernDddPhp\Domain\Repository\Product\Exception\ProductNotFoundException;
 use PHPUnit\Framework\TestCase;
 
 class OrderServiceTest extends TestCase

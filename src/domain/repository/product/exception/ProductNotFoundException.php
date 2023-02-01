@@ -1,5 +1,5 @@
 <?php
-namespace Mansoor\TavernDddPhp\domain\repository\product\exception;
+namespace Mansoor\TavernDddPhp\Domain\Repository\Product\Exception;
 
 class ProductNotFoundException extends \Exception{
     protected $message = "no such product";

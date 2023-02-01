@@ -1,8 +1,8 @@
 <?php
-namespace Mansoor\TavernDddPhp\domain\entity;
+namespace Mansoor\TavernDddPhp\Domain\Entity;
 
 class Person{
-    protected $id;
-    protected $name;
-    protected $age;
+    protected string $id;
+    protected string $name;
+    protected string $age;
 }

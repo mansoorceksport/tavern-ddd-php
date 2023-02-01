@@ -2,8 +2,8 @@
 namespace Mansoor\TavernDddPhp\Application\Service\Tavern;
 
 use Mansoor\TavernDddPhp\Application\Service\Order\OrderService;
-use Mansoor\TavernDddPhp\domain\repository\customer\exception\CustomerNotFoundException;
-use Mansoor\TavernDddPhp\domain\repository\product\exception\ProductNotFoundException;
+use Mansoor\TavernDddPhp\Domain\Repository\Customer\Exception\CustomerNotFoundException;
+use Mansoor\TavernDddPhp\Domain\Repository\Product\Exception\ProductNotFoundException;
 
 class TavernService{
 

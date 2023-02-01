@@ -1,15 +1,15 @@
 <?php
 namespace Mansoor\TavernDddPhp\Application\Service\Order;
 
-use Mansoor\TavernDddPhp\domain\aggregate\Customer;
-use Mansoor\TavernDddPhp\domain\repository\customer\exception\CustomerAddException;
-use Mansoor\TavernDddPhp\domain\repository\customer\exception\CustomerNotFoundException;
-use Mansoor\TavernDddPhp\domain\repository\customer\Repository as CustomerRepository;
-use Mansoor\TavernDddPhp\domain\repository\product\exception\ProductNotFoundException;
-use Mansoor\TavernDddPhp\domain\repository\product\Repository as ProductRepository;
+use Mansoor\TavernDddPhp\Domain\Aggregate\Customer;
+
+use Mansoor\TavernDddPhp\Domain\Repository\Customer\Exception\CustomerAddException;
+use Mansoor\TavernDddPhp\Domain\Repository\Customer\Exception\CustomerNotFoundException;
+use Mansoor\TavernDddPhp\Domain\Repository\Customer\Repository as CustomerRepository;
+use Mansoor\TavernDddPhp\Domain\Repository\Product\Exception\ProductNotFoundException;
+use Mansoor\TavernDddPhp\Domain\Repository\Product\Repository as ProductRepository;
 
 class OrderService{
-    //TODO how to hide the customer repository with private and still use the orderconfigurator pattern
     protected CustomerRepository $customerRepository;
     protected ProductRepository $productRepository;
 

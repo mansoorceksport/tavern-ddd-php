@@ -1,9 +1,9 @@
 <?php
-namespace Mansoor\TavernDddPhp\domain\entity;
+namespace Mansoor\TavernDddPhp\Domain\Entity;
 
 class Item{
-    protected $id;
-    protected $name;
-    protected $description;
+    protected string $id;
+    protected string $name;
+    protected string $description;
 }
 

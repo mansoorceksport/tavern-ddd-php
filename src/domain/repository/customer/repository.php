@@ -1,12 +1,10 @@
 <?php
-namespace Mansoor\TavernDddPhp\domain\repository\customer;
-
-
+namespace Mansoor\TavernDddPhp\Domain\Repository\Customer;
 
 use Mansoor\TavernDddPhp\domain\aggregate\Customer;
-use Mansoor\TavernDddPhp\domain\repository\customer\exception\CustomerAddException;
-use Mansoor\TavernDddPhp\domain\repository\customer\exception\CustomerNotFoundException;
-use Mansoor\TavernDddPhp\domain\repository\customer\exception\CustomerUpdateException;
+use Mansoor\TavernDddPhp\Domain\Repository\Customer\Exception\CustomerAddException;
+use Mansoor\TavernDddPhp\Domain\Repository\Customer\Exception\CustomerNotFoundException;
+use Mansoor\TavernDddPhp\Domain\Repository\Customer\Exception\CustomerUpdateException;
 
 interface Repository{
     /**

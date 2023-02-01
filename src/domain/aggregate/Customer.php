@@ -1,10 +1,10 @@
 <?php
 
-namespace Mansoor\TavernDddPhp\domain\aggregate;
+namespace Mansoor\TavernDddPhp\Domain\Aggregate;
 
-use Mansoor\TavernDddPhp\domain\entity\Item;
-use Mansoor\TavernDddPhp\domain\entity\Person;
-use Mansoor\TavernDddPhp\domain\valueObject\Transaction;
+use Mansoor\TavernDddPhp\Domain\Entity\Item;
+use Mansoor\TavernDddPhp\Domain\Entity\Person;
+use Mansoor\TavernDddPhp\Domain\ValueObject\Transaction;
 
 final class Customer extends Person{
     CONST PREFIX = "customer_";

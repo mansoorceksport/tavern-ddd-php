@@ -1,5 +1,5 @@
 <?php
-namespace Mansoor\TavernDddPhp\domain\repository\product\exception;
+namespace Mansoor\TavernDddPhp\Domain\Repository\Product\Exception;
 
 class ProductAddException extends \Exception{
     protected $message = "failed to add product";

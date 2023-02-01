@@ -1,5 +1,5 @@
 <?php
-namespace Mansoor\TavernDddPhp\domain\valueObject;
+namespace Mansoor\TavernDddPhp\Domain\ValueObject;
 
 use DateTime;
 

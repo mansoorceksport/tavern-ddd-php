@@ -3,12 +3,11 @@ namespace Mansoor\TavernDddPhp\Application\Service\Tavern;
 
 use Mansoor\TavernDddPhp\Application\Service\Order\OrderConfiguration;
 use Mansoor\TavernDddPhp\Application\Service\Order\OrderService;
-use Mansoor\TavernDddPhp\domain\aggregate\Customer;
-use Mansoor\TavernDddPhp\domain\aggregate\Product;
-use Mansoor\TavernDddPhp\domain\repository\customer\exception\CustomerAddException;
-use Mansoor\TavernDddPhp\domain\repository\product\exception\ProductAddException;
+use Mansoor\TavernDddPhp\Domain\Aggregate\Customer;
+use Mansoor\TavernDddPhp\Domain\Aggregate\Product;
+use Mansoor\TavernDddPhp\Domain\Repository\Customer\Exception\CustomerAddException;
+use Mansoor\TavernDddPhp\Domain\Repository\Product\Exception\ProductAddException;
 use PHPUnit\Framework\TestCase;
-use Mansoor\TavernDddPhp\Application\Service\Tavern;
 
 class TavernServiceTest extends TestCase{
 
