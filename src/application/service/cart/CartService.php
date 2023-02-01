@@ -10,6 +10,7 @@ class CartService{
     private function __construct(){}
 
     /**
+     * @param mixed ...$cartConfiguration
      * @return CartService
      */
     public static function NewCart(...$cartConfiguration): CartService{
