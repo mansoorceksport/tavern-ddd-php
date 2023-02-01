@@ -19,11 +19,9 @@ class TavernService{
         return $ts;
     }
 
-    public function order(string $customerId, []$productIds): string{
+    public function order(string $customerId, array $productIds): string{
         try {
             $result = $this->orderService->CreateOrder($customerId, $productIds);
-            echo "hello tavern order";
-
         } catch (CustomerNotFoundException|ProductNotFoundException $e) {
             $result = $e->getMessage();
         }
