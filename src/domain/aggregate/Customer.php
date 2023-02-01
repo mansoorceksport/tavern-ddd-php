@@ -60,6 +60,6 @@ final class Customer extends Person{
     }
 
     public function setName(string $name){
-        $this->name = $name;
+        $this->name = strtolower($name);
     }
 }
