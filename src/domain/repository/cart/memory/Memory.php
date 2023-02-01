@@ -7,14 +7,21 @@ use Mansoor\TavernDddPhp\Domain\Repository\Cart\Repository;
 
 class Memory implements Repository {
 
+    /**
+     * @var array Product
+     */
     private array $products = [];
 
+    /**
+     * @return array
+     */
     public function getAll(): array
     {
         return $this->products;
     }
 
     /**
+     * @param Product $product
      * @throws CartAddException
      */
     public function add(Product $product): void
@@ -26,6 +33,7 @@ class Memory implements Repository {
     }
 
     /**
+     * @param Product $product
      * @throws CartAddException
      */
     public function delete(Product $product): void
