@@ -31,7 +31,7 @@ class OrderService{
     /**
      * @throws CustomerAddException
      */
-    public function setCustomer(Customer $customer){
+    public function setCustomer(Customer $customer): void{
         $this->customerRepository->add($customer);
     }
 
