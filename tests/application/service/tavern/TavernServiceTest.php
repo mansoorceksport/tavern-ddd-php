@@ -1,6 +1,7 @@
 <?php
 namespace Mansoor\TavernDddPhp\Application\Service\Tavern;
 
+use Mansoor\TavernDddPhp\Application\Service\Cart\CartService;
 use Mansoor\TavernDddPhp\Application\Service\Order\OrderConfiguration;
 use Mansoor\TavernDddPhp\Application\Service\Order\OrderService;
 use Mansoor\TavernDddPhp\Domain\Aggregate\Customer;
@@ -35,12 +36,17 @@ class TavernServiceTest extends TestCase{
             );
 
             // make order
-            $orders = [
-                $products[0]->getId(),
-                $products[1]->getId()
-            ];
+            $cart = CartService::NewCart();
+            $item1 = clone $products[0];
+            $item1->setQuantity(1);
 
-            $result = $tavern->order($c->getId(),$orders);
+            $item2 = clone $products[1];
+            $item2->setQuantity(1);
+
+            $cart->addProduct($item1);
+            $cart->addProduct($item2);
+
+            $result = $tavern->order($c->getId(), $cart);
             $this->assertTrue($result != "", "create order fail");
         } catch (ProductAddException|CustomerAddException $e) {
             $this->fail($e->getMessage());

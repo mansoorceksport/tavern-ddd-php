@@ -1,6 +1,7 @@
 <?php
 namespace Mansoor\TavernDddPhp\Application\Service\Tavern;
 
+use Mansoor\TavernDddPhp\Application\Service\Cart\CartService;
 use Mansoor\TavernDddPhp\Application\Service\Order\OrderService;
 use Mansoor\TavernDddPhp\Domain\Repository\Customer\Exception\CustomerNotFoundException;
 use Mansoor\TavernDddPhp\Domain\Repository\Product\Exception\ProductNotFoundException;
@@ -19,9 +20,9 @@ class TavernService{
         return $ts;
     }
 
-    public function order(string $customerId, array $productIds): string{
+    public function order(string $customerId, CartService $cartService): string{
         try {
-            $result = $this->orderService->CreateOrder($customerId, $productIds);
+            $result = $this->orderService->CreateOrder($customerId, $cartService->getProducts());
         } catch (CustomerNotFoundException|ProductNotFoundException $e) {
             $result = $e->getMessage();
         }
