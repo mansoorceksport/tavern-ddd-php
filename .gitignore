@@ -1,0 +1,4 @@
+.idea
+tavern-ddd-php.iml
+vendor
+.phpunit.result.cache
